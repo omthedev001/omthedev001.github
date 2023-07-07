@@ -22,16 +22,18 @@ const questions=[
     
     },
     {
-        question:"Integers is not commutative for addition",
+        question:"Integers are",
         answers:[
-            {text:"True",correct:true},
-            {text:"False",correct:false}
+            {text:"Not commutative for multiplication",correct:false},
+            {text:"Commutative for multiplication",correct:false},
+            {text:"Not commutative for addition",correct:true},
+            {text:"Commutative for addition",correct:false}
         ]
 
     
     },
     {
-        question:"0 / 0 is",
+        question:"0 ÷ 0 is",
         answers:[
             {text:"0",correct:true},
             {text:"infinity",correct:false},
@@ -42,10 +44,12 @@ const questions=[
     
     },
     {
-        question:"All integers are rational numbers but all rational numbers are not integers",
+        question:"All integers are rational numbers but all rational numbers are not integers\n",
         answers:[
             {text:"True",correct:true},
             {text:"False",correct:false},
+            {text:"True",correct:true},
+            {text:"False",correct:false}
             
         ]
 
