@@ -24,9 +24,30 @@ const questions=[
     {
         question:"Integers is not commutative for addition",
         answers:[
-            {text:"Additive inverse",correct:true},
+            {text:"True",correct:true},
             
-            {text:"Both A and B",correct:false}
+            {text:"False",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"0 ÷ 0 is",
+        answers:[
+            {text:"0",correct:true},
+            {text:"infinity",correct:false},
+            {text:"Not defined",correct:false},
+            {text:"None of these",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"All integers are rational numbers but all rational numbers are not integers",
+        answers:[
+            {text:"True",correct:true},
+            {text:"False",correct:false},
+            
         ]
 
     
@@ -43,29 +64,7 @@ const questions=[
     
     },
     {
-        question:"Multiplicative inverse is also known as",
-        answers:[
-            {text:"Additive inverse",correct:true},
-            {text:"Multiplicative identity",correct:false},
-            {text:"Reciprocal",correct:false},
-            {text:"Both A and B",correct:false}
-        ]
-
-    
-    },
-    {
-        question:"Multiplicative inverse is also known as",
-        answers:[
-            {text:"Additive inverse",correct:true},
-            {text:"Multiplicative identity",correct:false},
-            {text:"Reciprocal",correct:false},
-            {text:"Both A and B",correct:false}
-        ]
-
-    
-    },
-    {
-        question:"Multiplicative inverse is also known as",
+        question:"Multiplicative inverse is also known as\n",
         answers:[
             {text:"Additive inverse",correct:true},
             {text:"Multiplicative identity",correct:false},
