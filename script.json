@@ -2,31 +2,30 @@ const questions=[
     {
         question:"Multiplicative inverse is also known as",
         answers:[
-            {text:"Additive inverse",correct:true},
+            {text:"Additive inverse",correct:false},
             {text:"Multiplicative identity",correct:false},
-            {text:"Reciprocal",correct:false},
+            {text:"Reciprocal",correct:true},
             {text:"Both A and B",correct:false}
         ]
 
     
     },
     {
-        question:"Multiplicative inverse is also known as",
+        question:"Additive inverse of any number is also called",
         answers:[
-            {text:"Additive inverse",correct:true},
-            {text:"Multiplicative identity",correct:false},
+            {text:"Negative",correct:true},
+            {text:"Multiplicative inverse",correct:false},
             {text:"Reciprocal",correct:false},
-            {text:"Both A and B",correct:false}
+            {text:"None of these",correct:false}
         ]
 
     
     },
     {
-        question:"Multiplicative inverse is also known as",
+        question:"Integers is not commutative for addition",
         answers:[
             {text:"Additive inverse",correct:true},
-            {text:"Multiplicative identity",correct:false},
-            {text:"Reciprocal",correct:false},
+            
             {text:"Both A and B",correct:false}
         ]
 
