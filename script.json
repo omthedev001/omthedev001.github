@@ -22,7 +22,7 @@ const questions=[
     
     },
     {
-        question:"Integers are not commutative for addition",
+        question:"Integers are commutative for addition",
         answers:[
             {text:"True",correct:false},
             {text:"False",correct:true}
@@ -63,7 +63,7 @@ const questions=[
     
     },
     {
-        question:"Multiplicative inverse is also known as ksldjaldksdsajkldsdkldajdajjdhjadskkdh",
+        question:"Multiplicative inver\nks",
         answers:[
             {text:"Additive inverse",correct:true},
             {text:"Multiplicative identity",correct:false},
