@@ -63,7 +63,7 @@ const questions=[
     
     },
     {
-        question:"Multiplicative inverse is also known as\nhjadskkdh",
+        question:"Multiplicative inverse is also known as ksldjaldksdsajkldsdkldajdajjdhjadskkdh",
         answers:[
             {text:"Additive inverse",correct:true},
             {text:"Multiplicative identity",correct:false},
