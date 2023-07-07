@@ -1,0 +1,194 @@
+const questions=[
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    },
+    {
+        question:"Multiplicative inverse is also known as",
+        answers:[
+            {text:"Additive inverse",correct:true},
+            {text:"Multiplicative identity",correct:false},
+            {text:"Reciprocal",correct:false},
+            {text:"Both A and B",correct:false}
+        ]
+
+    
+    }
+    
+];
+const qelement = document.getElementById("question");
+const btnelement = document.getElementById("answer-buttons");
+const nxtelement = document.getElementById("nxt-btn");
+
+let currentindex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentindex = 0;
+    score = 0;
+    nxtelement.innerHTML = "Next" ;
+    
+    showQuestion();
+}
+function showQuestion(){
+    resetstate();
+    let currentQuestion = questions[currentindex];
+    let questionNo = currentindex + 1;
+    qelement.innerHTML= questionNo +". "+ currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer =>{
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        btnelement.appendChild(button)
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click",selectAnswer)
+    });
+}
+function resetstate(){
+    nxtelement.style.display = "none";
+    while(btnelement.firstChild){
+        btnelement.removeChild(btnelement.firstChild);
+    }
+
+}
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if (isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }
+    else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(btnelement.children).forEach(button =>{
+        if (button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nxtelement.style.display = "block";
+
+}
+function showScore(){
+    resetstate();
+    qelement.innerHTML = `You scored ${score} out of ${questions.length}!.Please show this screen to the volunteers.`;
+    nxtelement.innerHTML = "Play again";
+    nxtelement.style.display = "block";
+}
+function handleNext(){
+    currentindex++;
+    if(currentindex < questions.length){
+        showQuestion();
+    }
+    else{
+        showScore();
+    }
+}
+nxtelement.addEventListener("click", ()=>{
+    if (currentindex < questions.length){
+        handleNext();
+    }
+    else{
+        startQuiz();
+    }
+});
+startQuiz();
