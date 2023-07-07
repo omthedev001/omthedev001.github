@@ -25,14 +25,13 @@ const questions=[
         question:"Integers is not commutative for addition",
         answers:[
             {text:"True",correct:true},
-            
             {text:"False",correct:false}
         ]
 
     
     },
     {
-        question:"0 ÷ 0 is",
+        question:"0 / 0 is",
         answers:[
             {text:"0",correct:true},
             {text:"infinity",correct:false},
